@@ -20,6 +20,7 @@ import ethUi from './ui/eth.js';
 import lldpUi from './ui/lldp.js';
 import stpUi from './ui/stp.js';
 import dhcpUi from './ui/dhcp.js';
+import vlanUi from './ui/vlan.js';
 
 const bleService = 0x00FF;
 
@@ -40,7 +41,7 @@ const bleStatus = {
 // Object.keys(historyValues).map(k=>[k, historyValues.removeItem(k)]);
 
 const bleContainer = createTileContainer('BLE');
-const characteristics = [ethUi, dhcpUi, lldpUi, stpUi].map(c=>({
+const characteristics = [ethUi, dhcpUi, lldpUi, vlanUi, stpUi].map(c=>({
   ...c,
   value: typeof c.uuid === 'object' ?
     Object.fromEntries(Object.entries(c.uuid).map(([k])=>
