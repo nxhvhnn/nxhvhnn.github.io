@@ -6,7 +6,7 @@ export default {
   uuid: 0xFF04,
   update: (c)=>{
     if (!c.value.byteLength) return tile('STP', 'pading', 'unknown');
-    if (c.value.byteLength < 2) return tile('STP', 'ok', 'ok');
+    if (c.value.byteLength < 2) return tile('STP', 'ok', 'OK');
 
     const stp = parseSTP(c.value);
 
