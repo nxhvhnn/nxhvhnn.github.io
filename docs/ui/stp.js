@@ -20,10 +20,10 @@ export default {
 
     return html`
       ${tile('STP', 'GOOD', 'good', stp)}
-      ${tile('Port', stp['Port Identifier']['ID'], 'ok', stp['Port Identifier'])}
-      ${tile('Bridge', stp['Bridge Identifier']['System ID'], 'ok', stp['Bridge Identifier'])}
-      ${tile('Root', stp['Root Identifier']['System ID'], 'ok', stp['Root Identifier'])}
-      ${tile('Path', path.length ? '-'+path.join('-')+'-' : 'direct', 'ok', {
+      ${tile('STP Port', stp['Port Identifier']['ID'], 'ok', stp['Port Identifier'])}
+      ${tile('STP Bridge', stp['Bridge Identifier']['System ID'], 'ok', stp['Bridge Identifier'])}
+      ${tile('STP Root', stp['Root Identifier']['System ID'], 'ok', stp['Root Identifier'])}
+      ${tile('STP Path', path.length ? '-'+path.join('-')+'-' : 'direct', 'ok', {
         'Estimated Path': path,
         'Estimated Path Length': path.length,
         'Path Cost': stp['Root Path Cost'],
